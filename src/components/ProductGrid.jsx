@@ -11,7 +11,7 @@ const ProductGrid = ({ searchTerm, selectedCategory }) => {
       category: selectedCategory,
       search: searchTerm
     }
-
+ 
     // Filter products using the utility function
     let filtered = filterProducts(products, filters)
 

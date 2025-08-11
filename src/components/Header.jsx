@@ -34,6 +34,23 @@ const Header = ({ searchTerm, setSearchTerm }) => {
         </button>
 
         <nav className={`nav ${isMobileMenuOpen ? 'nav-open' : ''}`}>
+          {/* Mobile Search */}
+          <div className="mobile-search">
+            <input
+              type="text"
+              placeholder="Search projects..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="mobile-search-input"
+            />
+            <button className="mobile-search-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+              </svg>
+            </button>
+          </div>
+
           <Link
             to="/"
             className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}
@@ -71,27 +88,20 @@ const Header = ({ searchTerm, setSearchTerm }) => {
           </Link>
         </nav>
 
-        <div className="header-right">
-          <div className="search-container">
-            <input
-              type="text"
-              placeholder="Search projects..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="search-input"
-            />
-            <button className="search-btn">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <circle cx="11" cy="11" r="8"></circle>
-                <path d="m21 21-4.35-4.35"></path>
-              </svg>
-            </button>
-          </div>
-
-          <div className="header-actions">
-            <button className="btn-secondary">Sign In</button>
-            <button className="btn-primary">Sell Project</button>
-          </div>
+        <div className="search-container">
+          <input
+            type="text"
+            placeholder="Search projects..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="search-input"
+          />
+          <button className="search-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+          </button>
         </div>
 
         {/* Mobile Overlay */}
