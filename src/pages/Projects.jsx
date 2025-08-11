@@ -1,20 +1,9 @@
 import React from 'react'
+import { categories } from '../data'
 import ProductGrid from '../components/ProductGrid'
 import './Projects.css'
 
 const Projects = ({ searchTerm, selectedCategory, setSelectedCategory }) => {
-  const categories = [
-    { id: 'all', name: 'All Projects' },
-    { id: 'web', name: 'Web Development' },
-    { id: 'mobile', name: 'Mobile Apps' },
-    { id: 'ai', name: 'AI/ML' },
-    { id: 'cybersecurity', name: 'Cybersecurity' },
-    { id: 'desktop', name: 'Desktop Apps' },
-    { id: 'game', name: 'Game Development' },
-    { id: 'blockchain', name: 'Blockchain' },
-    { id: 'iot', name: 'IoT Projects' },
-    { id: 'data', name: 'Data Science' }
-  ]
 
   return (
     <div className="projects-page">

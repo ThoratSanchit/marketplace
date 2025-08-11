@@ -1,57 +1,9 @@
 import React from 'react'
+import { siteConfig, teamMembers } from '../data'
 import './About.css'
 
 const About = () => {
-  const features = [
-    {
-      icon: '🎯',
-      title: 'Quality Assurance',
-      description: 'Every project is thoroughly tested and reviewed by our expert team before being listed.'
-    },
-    {
-      icon: '💡',
-      title: 'Innovation Focus',
-      description: 'We feature cutting-edge projects using the latest technologies and best practices.'
-    },
-    {
-      icon: '🤝',
-      title: 'Community Driven',
-      description: 'Built by developers, for developers. We understand your needs and challenges.'
-    },
-    {
-      icon: '📚',
-      title: 'Learning Oriented',
-      description: 'Each project comes with comprehensive documentation and learning resources.'
-    }
-  ]
-
-  const stats = [
-    { number: '500+', label: 'Projects Available' },
-    { number: '10,000+', label: 'Happy Students' },
-    { number: '50+', label: 'Technologies' },
-    { number: '95%', label: 'Satisfaction Rate' }
-  ]
-
-  const team = [
-    {
-      name: 'Alex Johnson',
-      role: 'Founder & CEO',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face',
-      description: 'Former Google engineer with 10+ years in software development.'
-    },
-    {
-      name: 'Sarah Chen',
-      role: 'CTO',
-      image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face',
-      description: 'AI/ML expert and former Stanford CS professor.'
-    },
-    {
-      name: 'Mike Rodriguez',
-      role: 'Head of Quality',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face',
-      description: 'Senior developer with expertise in code review and testing.'
-    }
-  ]
+  const { features, stats } = siteConfig
 
   return (
     <div className="about-page">
@@ -113,7 +65,7 @@ const About = () => {
           <section className="about-team">
             <h2>Meet Our Team</h2>
             <div className="team-grid">
-              {team.map((member, index) => (
+              {teamMembers.slice(0, 3).map((member, index) => (
                 <div key={index} className="team-card">
                   <img src={member.image} alt={member.name} className="team-image" />
                   <h3>{member.name}</h3>

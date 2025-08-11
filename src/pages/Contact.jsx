@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { contactInfo, faqs } from '../data'
 import './Contact.css'
 
 const Contact = () => {
@@ -23,56 +24,6 @@ const Contact = () => {
     alert('Thank you for your message! We\'ll get back to you soon.')
     setFormData({ name: '', email: '', subject: '', message: '' })
   }
-
-  const contactInfo = [
-    {
-      icon: '📧',
-      title: 'Email Us',
-      content: 'support@codemarket.com',
-      description: 'Send us an email anytime'
-    },
-    {
-      icon: '💬',
-      title: 'Live Chat',
-      content: 'Available 24/7',
-      description: 'Chat with our support team'
-    },
-    {
-      icon: '📞',
-      title: 'Call Us',
-      content: '+1 (555) 123-4567',
-      description: 'Mon-Fri, 9AM-6PM EST'
-    },
-    {
-      icon: '📍',
-      title: 'Visit Us',
-      content: 'San Francisco, CA',
-      description: 'Schedule an appointment'
-    }
-  ]
-
-  const faqs = [
-    {
-      question: 'How do I purchase a project?',
-      answer: 'Simply browse our projects, click on the one you like, and follow the checkout process. You\'ll receive instant access to download the project files.'
-    },
-    {
-      question: 'Are the projects original?',
-      answer: 'Yes, all our projects are original and developed by our team of experienced developers. Each project is unique and thoroughly tested.'
-    },
-    {
-      question: 'Do you provide support after purchase?',
-      answer: 'Absolutely! We provide 30 days of free support for any technical questions or issues you might encounter with your purchased project.'
-    },
-    {
-      question: 'Can I customize the projects?',
-      answer: 'Yes, all projects come with full source code and documentation, allowing you to customize and modify them according to your needs.'
-    },
-    {
-      question: 'What payment methods do you accept?',
-      answer: 'We accept all major credit cards, PayPal, and various other payment methods through our secure payment gateway.'
-    }
-  ]
 
   return (
     <div className="contact-page">

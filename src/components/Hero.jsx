@@ -1,30 +1,33 @@
 import React from 'react'
+import { siteConfig } from '../data'
 import './Hero.css'
 
 const Hero = () => {
+  const { stats } = siteConfig
+
   return (
     <section className="hero">
       <div className="hero-container">
         <div className="hero-content">
           <h1 className="hero-title">
-            Premium Software Projects for 
+            Premium Software Projects for
             <span className="highlight"> Students & Developers</span>
           </h1>
           <p className="hero-description">
-            Get high-quality, ready-to-use software projects for your academic needs. 
+            Get high-quality, ready-to-use software projects for your academic needs.
             From web applications to mobile apps, find the perfect project to boost your portfolio.
           </p>
           <div className="hero-stats">
             <div className="stat">
-              <span className="stat-number">500+</span>
+              <span className="stat-number">{stats.projects}+</span>
               <span className="stat-label">Projects Available</span>
             </div>
             <div className="stat">
-              <span className="stat-number">10k+</span>
+              <span className="stat-number">{(stats.students / 1000).toFixed(0)}k+</span>
               <span className="stat-label">Happy Students</span>
             </div>
             <div className="stat">
-              <span className="stat-number">50+</span>
+              <span className="stat-number">{stats.technologies}+</span>
               <span className="stat-label">Technologies</span>
             </div>
           </div>
