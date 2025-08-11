@@ -29,7 +29,7 @@
 }
 
 .about-content {
-  background: white;
+  background: var(--bg-primary);
 }
 
 .about-container {
@@ -49,12 +49,12 @@
 .mission-content h2 {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #2d3748;
+  color: var(--text-primary);
   margin-bottom: 1.5rem;
 }
 
 .mission-content p {
-  color: #4a5568;
+  color: var(--text-secondary);
   line-height: 1.7;
   margin-bottom: 1.5rem;
   font-size: 1.1rem;
@@ -68,13 +68,13 @@
 
 .about-features {
   padding: 4rem 0;
-  background: #f8fafc;
+  background: var(--bg-secondary);
 }
 
 .about-features h2 {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #2d3748;
+  color: var(--text-primary);
   text-align: center;
   margin-bottom: 3rem;
 }
@@ -86,17 +86,17 @@
 }
 
 .feature-card {
-  background: white;
+  background: var(--bg-primary);
   padding: 2rem;
   border-radius: 15px;
   text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 15px var(--shadow-light);
   transition: all 0.3s ease;
 }
 
 .feature-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 15px 35px var(--shadow-medium);
 }
 
 .feature-icon {
@@ -107,24 +107,24 @@
 .feature-card h3 {
   font-size: 1.3rem;
   font-weight: 600;
-  color: #2d3748;
+  color: var(--text-primary);
   margin-bottom: 1rem;
 }
 
 .feature-card p {
-  color: #4a5568;
+  color: var(--text-secondary);
   line-height: 1.6;
 }
 
 .about-stats {
   padding: 4rem 0;
-  background: white;
+  background: var(--bg-primary);
 }
 
 .about-stats h2 {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #2d3748;
+  color: var(--text-primary);
   text-align: center;
   margin-bottom: 3rem;
 }
@@ -143,25 +143,25 @@
 .stat-number {
   font-size: 3rem;
   font-weight: 700;
-  color: #667eea;
+  color: var(--brand-primary);
   margin-bottom: 0.5rem;
 }
 
 .stat-label {
-  color: #4a5568;
+  color: var(--text-secondary);
   font-weight: 500;
   font-size: 1.1rem;
 }
 
 .about-team {
   padding: 4rem 0;
-  background: #f8fafc;
+  background: var(--bg-secondary);
 }
 
 .about-team h2 {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #2d3748;
+  color: var(--text-primary);
   text-align: center;
   margin-bottom: 3rem;
 }
@@ -173,17 +173,17 @@
 }
 
 .team-card {
-  background: white;
+  background: var(--bg-primary);
   padding: 2rem;
   border-radius: 15px;
   text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 15px var(--shadow-light);
   transition: all 0.3s ease;
 }
 
 .team-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 15px 35px var(--shadow-medium);
 }
 
 .team-image {
@@ -197,18 +197,18 @@
 .team-card h3 {
   font-size: 1.3rem;
   font-weight: 600;
-  color: #2d3748;
+  color: var(--text-primary);
   margin-bottom: 0.5rem;
 }
 
 .team-role {
-  color: #667eea;
+  color: var(--brand-primary);
   font-weight: 500;
   margin-bottom: 1rem;
 }
 
 .team-description {
-  color: #4a5568;
+  color: var(--text-secondary);
   line-height: 1.6;
   font-size: 0.9rem;
 }

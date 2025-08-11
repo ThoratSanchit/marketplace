@@ -30,7 +30,7 @@
 
 .categories-page-content {
   padding: 4rem 0;
-  background: #f8fafc;
+  background: var(--bg-secondary);
 }
 
 .categories-page-container {
@@ -46,17 +46,17 @@
 }
 
 .category-detailed-card {
-  background: white;
+  background: var(--bg-primary);
   border-radius: 15px;
   padding: 2rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 15px var(--shadow-light);
   transition: all 0.3s ease;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border-color);
 }
 
 .category-detailed-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 15px 35px var(--shadow-medium);
 }
 
 .category-detailed-header {
@@ -81,18 +81,18 @@
 .category-detailed-info h3 {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #2d3748;
+  color: var(--text-primary);
   margin-bottom: 0.5rem;
 }
 
 .category-detailed-count {
-  color: #667eea;
+  color: var(--brand-primary);
   font-weight: 500;
   font-size: 0.9rem;
 }
 
 .category-detailed-description {
-  color: #4a5568;
+  color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: 1.5rem;
   font-size: 0.95rem;
@@ -101,7 +101,7 @@
 .category-detailed-technologies h4 {
   font-size: 1rem;
   font-weight: 600;
-  color: #2d3748;
+  color: var(--text-primary);
   margin-bottom: 0.75rem;
 }
 
@@ -113,13 +113,13 @@
 }
 
 .tech-tag {
-  background: #f7fafc;
-  color: #4a5568;
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
   padding: 0.25rem 0.75rem;
   border-radius: 12px;
   font-size: 0.8rem;
   font-weight: 500;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border-color);
 }
 
 .category-detailed-actions {

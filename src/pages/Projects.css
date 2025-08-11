@@ -29,9 +29,9 @@
 }
 
 .projects-filters {
-  background: #f8fafc;
+  background: var(--bg-secondary);
   padding: 2rem 0;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .projects-filters-container {
@@ -44,7 +44,7 @@
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: #2d3748;
+  color: var(--text-primary);
 }
 
 .category-filters {
@@ -55,10 +55,10 @@
 
 .filter-btn {
   padding: 0.75rem 1.5rem;
-  border: 2px solid #e2e8f0;
+  border: 2px solid var(--border-color);
   border-radius: 25px;
-  background: white;
-  color: #4a5568;
+  background: var(--bg-primary);
+  color: var(--text-secondary);
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -66,20 +66,20 @@
 }
 
 .filter-btn:hover {
-  border-color: #667eea;
-  color: #667eea;
+  border-color: var(--brand-primary);
+  color: var(--brand-primary);
   transform: translateY(-2px);
 }
 
 .filter-btn.active {
-  background: linear-gradient(45deg, #667eea, #764ba2);
+  background: var(--brand-gradient);
   color: white;
   border-color: transparent;
 }
 
 .filter-btn.active:hover {
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 5px 15px var(--focus-ring);
 }
 
 @media (max-width: 768px) {
