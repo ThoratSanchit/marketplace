@@ -3,7 +3,15 @@ import { siteConfig, teamMembers } from '../data'
 import './About.css'
 
 const About = () => {
-  const { features, stats } = siteConfig
+  const { features, stats: siteStats } = siteConfig
+
+  // Convert stats object to array format for display
+  const stats = [
+    { number: `${siteStats.projects}+`, label: 'Projects Available' },
+    { number: `${(siteStats.students / 1000).toFixed(0)}k+`, label: 'Happy Students' },
+    { number: `${siteStats.technologies}+`, label: 'Technologies' },
+    { number: `${siteStats.satisfaction}%`, label: 'Satisfaction Rate' }
+  ]
 
   return (
     <div className="about-page">
