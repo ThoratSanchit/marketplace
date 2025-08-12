@@ -1,8 +1,10 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import { siteConfig, teamMembers } from '../data'
 import './About.css'
 
 const About = () => {
+  const navigate = useNavigate()
   const { features, stats: siteStats } = siteConfig
 
   // Convert stats object to array format for display
@@ -12,6 +14,14 @@ const About = () => {
     { number: `${siteStats.technologies}+`, label: 'Technologies' },
     { number: `${siteStats.satisfaction}%`, label: 'Satisfaction Rate' }
   ]
+
+  const handleBrowseProjects = () => {
+    navigate('/projects')
+  }
+
+  const handleContactUs = () => {
+    navigate('/contact')
+  }
 
   return (
     <div className="about-page">
@@ -89,8 +99,12 @@ const About = () => {
               <h2>Ready to Start Your Journey?</h2>
               <p>Join thousands of students and developers who trust CodeMarket for their project needs.</p>
               <div className="cta-buttons">
-                <button className="btn-primary">Browse Projects</button>
-                <button className="btn-secondary">Contact Us</button>
+                <button className="btn-primary" onClick={handleBrowseProjects}>
+                  Browse Projects
+                </button>
+                <button className="btn-secondary" onClick={handleContactUs}>
+                  Contact Us
+                </button>
               </div>
             </div>
           </section>

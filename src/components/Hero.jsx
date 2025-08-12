@@ -1,8 +1,10 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import { siteConfig } from '../data'
 import './Hero.css'
 
 const Hero = () => {
+  const navigate = useNavigate()
   const { stats } = siteConfig
 
   const scrollToHowItWorks = () => {
@@ -16,6 +18,10 @@ const Hero = () => {
         behavior: 'smooth'
       })
     }
+  }
+
+  const handleBrowseProjects = () => {
+    navigate('/projects')
   }
 
   return (
@@ -45,7 +51,9 @@ const Hero = () => {
             </div>
           </div>
           <div className="hero-actions">
-            <button className="btn-hero-primary">Browse Projects</button>
+            <button className="btn-hero-primary" onClick={handleBrowseProjects}>
+              Browse Projects
+            </button>
             <button className="btn-hero-secondary" onClick={scrollToHowItWorks}>
               How It Works
             </button>
