@@ -5,6 +5,16 @@ import './Hero.css'
 const Hero = () => {
   const { stats } = siteConfig
 
+  const scrollToHowItWorks = () => {
+    const element = document.getElementById('how-it-works')
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      })
+    }
+  }
+
   return (
     <section className="hero">
       <div className="hero-container">
@@ -33,7 +43,9 @@ const Hero = () => {
           </div>
           <div className="hero-actions">
             <button className="btn-hero-primary">Browse Projects</button>
-            <button className="btn-hero-secondary">How It Works</button>
+            <button className="btn-hero-secondary" onClick={scrollToHowItWorks}>
+              How It Works
+            </button>
           </div>
         </div>
         <div className="hero-visual">
