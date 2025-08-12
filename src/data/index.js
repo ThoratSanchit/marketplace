@@ -1,3 +1,7 @@
+// Import data modules
+import { products } from './products'
+import { categories } from './categories'
+
 // Export all data modules
 export { products } from './products'
 export { categories, getCategoryById, getCategoriesWithCounts } from './categories'
@@ -7,32 +11,27 @@ export { siteConfig } from './siteConfig'
 
 // Utility functions for data manipulation
 export const getProductById = (id) => {
-  const { products } = require('./products')
   return products.find(product => product.id === parseInt(id))
 }
 
 export const getProductsByCategory = (categoryId) => {
-  const { products } = require('./products')
   if (categoryId === 'all') return products
   return products.filter(product => product.category === categoryId)
 }
 
 export const getFeaturedProducts = () => {
-  const { products } = require('./products')
   return products.filter(product => product.featured)
 }
 
 export const getProductsByTechnology = (technology) => {
-  const { products } = require('./products')
-  return products.filter(product => 
-    product.technologies.some(tech => 
+  return products.filter(product =>
+    product.technologies.some(tech =>
       tech.toLowerCase().includes(technology.toLowerCase())
     )
   )
 }
 
 export const searchProducts = (searchTerm) => {
-  const { products } = require('./products')
   const term = searchTerm.toLowerCase()
   return products.filter(product =>
     product.title.toLowerCase().includes(term) ||
@@ -112,9 +111,6 @@ export const filterProducts = (products, filters) => {
 
 // Analytics and statistics
 export const getProductStats = () => {
-  const { products } = require('./products')
-  const { categories } = require('./categories')
-  
   return {
     totalProducts: products.length,
     totalCategories: categories.length - 1, // Exclude 'all' category
@@ -130,15 +126,14 @@ export const getProductStats = () => {
 }
 
 export const getTechnologyStats = () => {
-  const { products } = require('./products')
   const techCount = {}
-  
+
   products.forEach(product => {
     product.technologies.forEach(tech => {
       techCount[tech] = (techCount[tech] || 0) + 1
     })
   })
-  
+
   return Object.entries(techCount)
     .map(([tech, count]) => ({ technology: tech, count }))
     .sort((a, b) => b.count - a.count)
