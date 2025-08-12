@@ -8,9 +8,12 @@ const Hero = () => {
   const scrollToHowItWorks = () => {
     const element = document.getElementById('how-it-works')
     if (element) {
-      element.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
+      const headerHeight = document.querySelector('.header').offsetHeight
+      const elementPosition = element.offsetTop - headerHeight - 20 // 20px extra padding
+
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
       })
     }
   }
