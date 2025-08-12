@@ -6,6 +6,8 @@
   align-items: center;
   position: relative;
   overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .hero::before {
@@ -29,6 +31,8 @@
   align-items: center;
   position: relative;
   z-index: 1;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .hero-content {
@@ -41,6 +45,8 @@
   line-height: 1.2;
   margin-bottom: 1.5rem;
   color: var(--text-primary);
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 .highlight {
@@ -228,28 +234,64 @@
 }
 
 @media (max-width: 768px) {
+  .hero {
+    padding: 2rem 0;
+    min-height: 60vh;
+  }
+
   .hero-container {
     grid-template-columns: 1fr;
     gap: 2rem;
     text-align: center;
+    padding: 0 1rem;
   }
 
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+    word-break: break-word;
+    hyphens: auto;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    padding: 0 0.5rem;
   }
 
   .hero-stats {
     justify-content: center;
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .stat-item {
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .stat-label {
+    font-size: 0.9rem;
   }
 
   .hero-actions {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
+    padding: 0 1rem;
   }
 
   .btn-hero-primary, .btn-hero-secondary {
-    width: 200px;
+    width: 100%;
+    max-width: 280px;
+    padding: 1rem 2rem;
+    font-size: 1rem;
   }
 
   .hero-visual {
@@ -294,5 +336,62 @@
   .card-4 {
     bottom: 10px;
     right: 10px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .hero-container {
+    padding: 0 0.5rem;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .hero-description {
+    font-size: 0.9rem;
+    padding: 0;
+  }
+
+  .hero-stats {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .stat-number {
+    font-size: 1.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.8rem;
+  }
+
+  .btn-hero-primary, .btn-hero-secondary {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .hero-visual {
+    height: 240px;
+  }
+
+  .floating-card {
+    width: 120px;
+    min-height: 100px;
+    padding: 0.6rem;
+  }
+
+  .card-icon {
+    font-size: 1.5rem;
+  }
+
+  .floating-card h3 {
+    font-size: 0.8rem;
+  }
+
+  .floating-card p {
+    font-size: 0.65rem;
   }
 }
