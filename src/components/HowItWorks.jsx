@@ -2,8 +2,6 @@ import React from 'react'
 import './HowItWorks.css'
 
 const HowItWorks = () => {
-  console.log('HowItWorks component is rendering!')
-
   const steps = [
     {
       id: 1,

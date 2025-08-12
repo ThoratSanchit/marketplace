@@ -2,8 +2,6 @@
   padding: 5rem 0;
   background: var(--bg-primary);
   position: relative;
-  border: 2px solid red; /* Temporary debug border */
-  min-height: 200px; /* Ensure it has height */
 }
 
 .how-it-works-container {
